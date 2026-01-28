@@ -100,3 +100,6 @@ body {
     text-decoration: none;
     color: black;
 }
+.nav-links {
+    display: flex;
+}
