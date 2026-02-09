@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 2rem;  /* increase top & bottom */
+    padding: 3rem 2rem;  /* increase top & bottom */
     border-bottom: 1px solid #eee;
 }
 
@@ -146,6 +146,7 @@ transition: color 0.3s ease, transform 0.2s ease;
     color: #123b5a;
     transform: translateY(-2px);
 }
+
 
 
 
