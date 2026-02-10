@@ -27,9 +27,27 @@
 <main class="container">
     <!-- Write about your site here -->
 </main>
+<script>
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector(".nav");
 
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // scrolling down
+        navbar.classList.add("nav-hidden");
+    } else {
+        // scrolling up
+        navbar.classList.remove("nav-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+});
+</script>
 </body>
 </html>
+
 
 
 
