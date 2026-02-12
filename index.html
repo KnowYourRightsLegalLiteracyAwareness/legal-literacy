@@ -149,13 +149,45 @@ menuLinks.forEach(link => {
 });
 </script>
 <script>
+const loader = document.getElementById("page-loader");
+
+// Show loader immediately
+document.body.classList.add("loading");
+
+// Hide loader after page fully loads
 window.addEventListener("load", () => {
-    const loader = document.getElementById("page-loader");
-    loader.classList.add("hidden");
+    setTimeout(() => {
+        loader.classList.add("hidden");
+        document.body.classList.remove("loading");
+    }, 300); // small delay = smoother UX
+});
+
+// Show loader on route change (link clicks)
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+
+        // Ignore empty, hash-only, or new tab links
+        if (
+            !href ||
+            href.startsWith("#") ||
+            this.target === "_blank"
+        ) return;
+
+        e.preventDefault();
+
+        loader.classList.remove("hidden");
+        document.body.classList.add("loading");
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 250);
+    });
 });
 </script>
 </body>
 </html>
+
 
 
 
