@@ -594,3 +594,9 @@ section h2 {
     background: #f0edb4;
 }
 
+/* Add this to your style.css if it's not there */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
