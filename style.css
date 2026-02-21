@@ -175,22 +175,22 @@ body {
 }
 
 /* Activated */
-..active {
+.reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Optional variations */
-.-left {
+.reveal-left {
     transform: translateX(-50px);
 }
 
-.-right {
+.reveal-right {
     transform: translateX(50px);
 }
 
-.-left.active,
-.-right.active {
+.reveal-left.active,
+.reveal-right.active {
     transform: translateX(0);
 }
 
@@ -595,5 +595,6 @@ section h2 {
     text-align: center;
     background: #f0edb4;
 }
+
 
 
