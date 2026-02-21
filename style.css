@@ -167,28 +167,30 @@ body {
     width: 100%;
 }
 
-.reveal {
+/* Scroll reveal base */
+. {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal.active {
+/* Activated */
+..active {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Optional variations */
-.reveal-left {
+.-left {
     transform: translateX(-50px);
 }
 
-.reveal-right {
+.-right {
     transform: translateX(50px);
 }
 
-.reveal-left.active,
-.reveal-right.active {
+.-left.active,
+.-right.active {
     transform: translateX(0);
 }
 
@@ -593,4 +595,5 @@ section h2 {
     text-align: center;
     background: #f0edb4;
 }
+
 
